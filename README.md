@@ -1,8 +1,3 @@
-# Spirala
+# My Finances
 
-* Dženana Huseinspahić
-* 18313
-* 2019/2020
-
-# Opis
-
+Project for Mobile App Development
