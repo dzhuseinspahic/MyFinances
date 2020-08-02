@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ba.unsa.etf.rma.rma20huseinspahicdzenana13.list.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/mainLayout"
+        android:layout_marginTop="15dp"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5">
+
+        <LinearLayout
+            android:id="@+id/layoutHorizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/filterSpinner"
+            >
+
+            <LinearLayout
+                android:id="@+id/layoutVertical"
+                android:layout_marginStart="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toStartOf="@+id/layoutVertical2"
+                >
+
+                <TextView
+                    android:id="@+id/globalAmountTextView1"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Global amount:"
+                    android:textColor="#000000"
+                    />
+
+                <TextView
+                    android:id="@+id/limitTextView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:text="Limit:"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutVertical2"
+                android:layout_marginStart="10dp"
+                android:layout_width="116dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintStart_toEndOf="@+id/layoutVertical"
+                >
+
+                <TextView
+                    android:id="@+id/globalAmountTextView2"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TextView"
+                    android:textColor="#000000"
+                    tools:layout_editor_absoluteX="142dp"
+                    tools:layout_editor_absoluteY="29dp" />
+
+                <TextView
+                    android:id="@+id/limitTextView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TextView"
+                    android:textColor="#000000"
+                    tools:layout_editor_absoluteX="110dp"
+                    tools:layout_editor_absoluteY="82dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Spinner
+            android:id="@+id/filterSpinner"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_width="340dp"
+            android:layout_height="26dp"
+            app:layout_constraintBottom_toTopOf="@id/dateTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearHorizontalLayoutLimit"
+            app:layout_constraintVertical_chainStyle="spread"
+            tools:layout_editor_absoluteX="25dp"
+            tools:layout_editor_absoluteY="133dp" />
+
+        <LinearLayout
+            android:id="@+id/layoutHorizontalForButtons"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/sortSpinner"
+            app:layout_constraintTop_toBottomOf="@id/filterSpinner">
+
+            <Button
+                android:id="@+id/leftButton"
+                android:layout_width="73dp"
+                android:layout_height="40dp"
+                android:background="#F6E233"
+                android:textColor="#000000"
+                android:text="←"
+                app:layout_constraintEnd_toStartOf="@+id/dateTextView" />
+
+
+            <TextView
+                android:id="@+id/dateTextView"
+                android:layout_width="199dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                app:layout_constraintEnd_toStartOf="@+id/rightButton"
+                app:layout_constraintStart_toEndOf="@+id/leftButton" />
+
+            <Button
+                android:id="@+id/rightButton"
+                android:layout_width="73dp"
+                android:layout_height="40dp"
+                android:background="#F6E233"
+                android:textColor="#000000"
+                android:text="→"
+                tools:layout_editor_absoluteX="317dp"
+                tools:layout_editor_absoluteY="182dp"
+                app:layout_constraintStart_toEndOf="@+id/dateTextView"
+                />
+
+        </LinearLayout>
+
+        <Spinner
+            android:id="@+id/sortSpinner"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_width="340dp"
+            android:layout_height="26dp"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toTopOf="@id/listView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutHorizontalForButtons"
+            tools:layout_editor_absoluteX="25dp"
+            tools:layout_editor_absoluteY="133dp" />
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="340dp"
+            android:layout_height="250dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="10dp"
+            android:choiceMode="singleChoice"
+            android:nestedScrollingEnabled="true"
+            app:layout_constraintBottom_toTopOf="@+id/addTransactionButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sortSpinner"
+            tools:layout_editor_absoluteX="25dp"
+            tools:layout_editor_absoluteY="290dp">
+
+        </ListView>
+
+        <Button
+            android:id="@+id/addTransactionButton"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:text="Add transaction"
+            android:background="#F6E233"
+            android:textColor="#000000"
+            tools:layout_editor_absoluteX="148dp"
+            tools:layout_editor_absoluteY="635dp"
+            />
+
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
